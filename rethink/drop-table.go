@@ -29,3 +29,7 @@ func (m *dropTable) Migrate() error {
 
 	return nil
 }
+
+func (m *dropTable) Key(order int) string {
+	return fmt.Sprintf(`order: %d | drop table "%s"`, order, m.table)
+}

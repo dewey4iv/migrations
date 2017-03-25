@@ -29,3 +29,7 @@ func (m *createDB) Migrate() error {
 
 	return nil
 }
+
+func (m *createDB) Key(order int) string {
+	return fmt.Sprintf(`order: %d | create database "%s"`, order, m.database)
+}

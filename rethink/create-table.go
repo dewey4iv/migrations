@@ -29,3 +29,7 @@ func (m *createTable) Migrate() error {
 
 	return nil
 }
+
+func (m *createTable) Key(order int) string {
+	return fmt.Sprintf(`order: %d | create table "%s"`, order, m.table)
+}
