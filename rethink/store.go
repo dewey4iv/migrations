@@ -10,6 +10,7 @@ import (
 	"github.com/dewey4iv/migrations"
 )
 
+// New returns a new rethink Migration
 func New(database string, session *gorethink.Session) (*Store, error) {
 	s := Store{
 		db:      gorethink.DB(database).Table("migrations"),
@@ -17,7 +18,7 @@ func New(database string, session *gorethink.Session) (*Store, error) {
 	}
 
 	mostRecent, _, err := s.MostRecent()
-	if err != nil && !strings.Contains(err.Error(), fmt.Sprintf("Database `%s` does not exist", database)) {
+	if err != nil && !strings.Contains(err.Error(), fmt.Sprintf("Database `%s` does not exist", database)) && !strings.Contains(err.Error(), "The result does not contain any more rows") {
 		return nil, err
 	}
 

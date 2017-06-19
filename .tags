@@ -1,0 +1,37 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Migration	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/migration.go	/^type Migration interface {$/;"	type	line:9
+New	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/migration.go	/^func New(store Store) *Migrations {$/;"	func	line:14
+Migrations	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/migration.go	/^type Migrations struct {$/;"	type	line:18
+Run	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/migration.go	/^func (m *Migrations) Run() error {$/;"	func	line:23
+row	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/migration.go	/^	var row Row$/;"	var	line:24
+Add	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/migration.go	/^func (m *Migrations) Add(migration Migration) {$/;"	func	line:60
+CreateDB	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/create-db.go	/^func CreateDB(session *gorethink.Session, database string) migrations.Migration {$/;"	func	line:11
+createDB	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/create-db.go	/^type createDB struct {$/;"	type	line:15
+Migrate	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/create-db.go	/^func (m *createDB) Migrate() error {$/;"	func	line:20
+Key	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/create-db.go	/^func (m *createDB) Key(order int) string {$/;"	func	line:33
+CreateTable	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/create-table.go	/^func CreateTable(session *gorethink.Session, table string) migrations.Migration {$/;"	func	line:11
+createTable	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/create-table.go	/^type createTable struct {$/;"	type	line:15
+Migrate	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/create-table.go	/^func (m *createTable) Migrate() error {$/;"	func	line:20
+Key	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/create-table.go	/^func (m *createTable) Key(order int) string {$/;"	func	line:33
+DropDB	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/drop-db.go	/^func DropDB(session *gorethink.Session, database string) migrations.Migration {$/;"	func	line:11
+dropDB	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/drop-db.go	/^type dropDB struct {$/;"	type	line:15
+Migrate	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/drop-db.go	/^func (m *dropDB) Migrate() error {$/;"	func	line:20
+Key	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/drop-db.go	/^func (m *dropDB) Key(order int) string {$/;"	func	line:33
+DropTable	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/drop-table.go	/^func DropTable(session *gorethink.Session, table string) migrations.Migration {$/;"	func	line:11
+dropTable	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/drop-table.go	/^type dropTable struct {$/;"	type	line:15
+Migrate	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/drop-table.go	/^func (m *dropTable) Migrate() error {$/;"	func	line:20
+Key	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/drop-table.go	/^func (m *dropTable) Key(order int) string {$/;"	func	line:33
+New	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/store.go	/^func New(database string, session *gorethink.Session) (*Store, error) {$/;"	func	line:13
+Store	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/store.go	/^type Store struct {$/;"	type	line:52
+History	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/store.go	/^func (s *Store) History() ([]string, error) {$/;"	func	line:57
+migrations	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/store.go	/^	var migrations []string$/;"	var	line:58
+MostRecent	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/store.go	/^func (s *Store) MostRecent() (int, string, error) {$/;"	func	line:73
+r	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/store.go	/^	var r migrations.Row$/;"	var	line:74
+SaveMigration	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/rethink/store.go	/^func (s *Store) SaveMigration(r migrations.Row) error {$/;"	func	line:89
+Store	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/store.go	/^type Store interface {$/;"	type	line:7
+Row	/Users/georgewheeler/Development/go/src/github.com/dewey4iv/migrations/store.go	/^type Row struct {$/;"	type	line:14
