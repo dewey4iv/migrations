@@ -3,7 +3,7 @@ package rethinkmigrations
 import (
 	"fmt"
 
-	"github.com/dancannon/gorethink"
+	"github.com/GoRethink/gorethink"
 	"github.com/dewey4iv/migrations"
 )
 
