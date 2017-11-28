@@ -18,6 +18,25 @@ type createTable struct {
 }
 
 func (m *createTable) Migrate() error {
+	listResult, err := gorethink.TableList().Run(m.session)
+	if err != nil {
+		return err
+	}
+
+	defer listResult.Close()
+
+	var tables []string
+
+	if err := listResult.All(&tables); err != nil {
+		return err
+	}
+
+	for i := range tables {
+		if tables[i] == m.table {
+			return nil
+		}
+	}
+
 	result, err := gorethink.TableCreate(m.table).RunWrite(m.session)
 	if err != nil {
 		return err
