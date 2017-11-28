@@ -18,6 +18,25 @@ type createDB struct {
 }
 
 func (m *createDB) Migrate() error {
+	listResult, err := gorethink.DBList().Run(m.session)
+	if err != nil {
+		return err
+	}
+
+	defer listResult.Close()
+
+	var list []string
+
+	if err := listResult.All(&list); err != nil {
+		return err
+	}
+
+	for i := range list {
+		if list[i] == m.database {
+			return nil
+		}
+	}
+
 	result, err := gorethink.DBCreate(m.database).RunWrite(m.session)
 	if err != nil {
 		return err
