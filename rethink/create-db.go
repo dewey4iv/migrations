@@ -2,6 +2,7 @@ package rethinkmigrations
 
 import (
 	"fmt"
+	"log"
 
 	"github.com/GoRethink/gorethink"
 	"github.com/dewey4iv/migrations"
@@ -32,6 +33,8 @@ func (m *createDB) Migrate() error {
 	}
 
 	for i := range list {
+		log.Printf("db found: %s", list[i])
+
 		if list[i] == m.database {
 			return nil
 		}
